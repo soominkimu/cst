@@ -1,12 +1,9 @@
 """
 Constellation data files (CSV) downloaded from the Google Spreadsheet (http://bit.ly/2FdYQNN)
 
-==================
-Source CSV columns
-------------------
-[constellation.csv]
+columns
 --- Basic Fields from Wikipedia (Jan,2019)
- 0. Constellation ID (IAU 3 alpha)
+ 0. Constellation ID (3 alpha)
  1. Name
  2. Bayer designation
  3. Flamsteed designation
@@ -24,57 +21,13 @@ Source CSV columns
 --- Extended Fields
 15. Famous Name
 
-[cst_boundaries.csv]
-
-[deepsky.csv] * Other celestial objecsts such as nebulae, star clusters, and galaxies
-- Messier objects (110): https://en.wikipedia.org/wiki/List_of_Messier_objects
-  M42 Orion nebula, M31 Andromeda galaxy, M45 Pleiades star cluster
-- Caldwell catalogue (109) by Patrick Moore: https://en.wikipedia.org/wiki/Caldwell_catalogue
-  Hyades
-- NGC(New General Catalogue): https://en.wikipedia.org/wiki/New_General_Catalogue
-
-=======================
-Intermediary JSON files
------------------------
-* Intermediary source files
-[cst_stars_src.json]
-- Constellation ID
-- HD_hex (HD catalogue # converted to Hex, to cover numbers postfixed with 'A'~'F')
-- RA, Dec in degree (finally required format is radian but degree is preferred for precision)
-- Apparent Magnitude
-
-[cst_lines_src.json]
-- Constellation ID
-- line width
-- list of star HD_hex's (in a pen down and same line-width drawing)
-
-[cst_illust.svg]
-- constellations illustration artworks in svg (needs a drawing tool)
-
-==========================
+#########
+PROCEDURE
+#########
 Destination JSON structure
 --------------------------
-[cst_comp.json] * Final compilation optimized for the runtime JS
-Recipe
-1. Remove HD_hex used as a foreign key to reference stars, use the serialized stars array index
-2. Normalize Constellation ID, making a separate 88 constellations table and use the index
-{
-"Constellations": [
-  ["AND"]
-],
-"Stars": [
-
-],
-"Lines": [
-
-],
-"Boundaries": [
-
-],
-"Illustrations": [
-
-],
-}
+- RA, Dec in degree (finally required format is radian but degree is preferred for precision)
+- Apparent Magnitude
 
 
 """
