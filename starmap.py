@@ -14,8 +14,8 @@ Source CSV columns
  5. Variable star designation
  6. HD: Henry Draper Catalogue (candidate for primary key but missing more that 10%)
  7. HIP: Hipparcos Catalogue
- 8. RA: Right Ascension (ex, 03h 46m 02.89s)
- 9. Dec: Declination (ex, +24° 31′ 40.8″)
+ 8. RA: Right Ascension (sexagesimal, ex, 03h 46m 02.89s)
+ 9. Dec: Declination    (sexagesimal, ex, +24° 31′ 40.8″)
 10. vis: Apparent Magnitude
 11. abs: Absolute Magnitude
 12. Dist: Distance in Light Year
@@ -24,7 +24,7 @@ Source CSV columns
 --- Extended Fields
 15. Famous Name
 
-[cst_boundaries.csv]
+[cst_boundaries.csv] (http://pbarbier.com/constellations/boundaries.html)
 
 [deepsky.csv] * Other celestial objecsts such as nebulae, star clusters, and galaxies
 - Messier objects (110): https://en.wikipedia.org/wiki/List_of_Messier_objects
